@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cp-golden-eagle-api
+    env: docker
+    plan: free
+    rootDir: api
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 8000
